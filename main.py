@@ -3,11 +3,14 @@ from naive_bayes import Bayesian_Probability, NaiveBayes
 from pickle import load
 
 with open("./cleaned/Probs.dat", "rb") as fh:
+    # dict containng bayesian probabilities
     Probs = load(fh)
 
 with open("./cleaned/state-map.dat", "rb") as fh:
+    # mapping of state name to its other alternative names
     state_map = load(fh)
 
+# naive bayes predictor
 predictor = NaiveBayes(Probs, state_map)
 
 app = Flask(__name__)

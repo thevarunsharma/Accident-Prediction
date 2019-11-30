@@ -2,11 +2,23 @@ from decimal import Decimal
 
 class Bayesian_Probability:
     def __init__(self, d1, d2):
+        """
+        d1 : dict
+            conditional probability of event X on accident, P(X | A)
+        d2 : dict
+            probability of event X, P(X)
+        """
         self.prob_XA = d1
         self.prob_X  = d2
 
 class NaiveBayes:
     def __init__(self, Probs, state_map):
+        """
+        Probs : dict
+            contains attribute : object of Bayesian_Probabilitiy
+        state_map : dict
+            mapping containing names of state : list of alternative names of state
+        """
         self.Probs = Probs
         self.state_map = state_map
 
