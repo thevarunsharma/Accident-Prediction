@@ -6,5 +6,5 @@ Accident prediction using Naive Bayes
 ```
 $ python3 main.py
 ```
-- server running at https://localhost:5000
+- server running at http://localhost:5000
 
