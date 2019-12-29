@@ -1,4 +1,3 @@
-print(__name__)
 from setuptools import setup
 
 setup(
