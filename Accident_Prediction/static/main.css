@@ -1,0 +1,104 @@
+body {
+    background-image: url('wallpaper.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: rgba(255, 255, 255, 0.5) 2px 2px;
+    font-family: Alegreya;
+}
+
+h3 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: Alegreya;
+}
+
+table {
+    background-color: rgba(116, 111, 106, 0.315);
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    align-self: center;
+    margin: auto;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    font-family: Raleway;
+}
+
+tr {
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    align-items: center;
+}
+
+td {
+    width: 270px;
+    align-self: center;
+    margin: auto;
+    text-align: center;
+}
+
+.field {
+    font-size:20;
+    color-interpolation-filters: auto;
+    text-align: center;
+    text-rendering: optimizeSpeed;
+    text-emphasis-color:inherit;
+    padding: 7px;
+    font-weight: 700;
+    color: #000000;
+    text-shadow: rgb(175, 159, 159) 1px 1px;
+}
+
+.value {
+    font-size:18;
+    color-interpolation-filters: auto;
+    text-rendering: optimizeSpeed;
+    text-align: center;
+    text-emphasis-color:inherit;
+}
+
+input[type=submit], a {
+    padding: 10px 20px 10px 20px;
+    background-color: black;
+    color: white;
+    box-shadow: rgba(43, 44, 40, 0.8) 5px 5px;
+    font-size: 20;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    font-family: Alegreya;
+    font-weight: 700;
+}
+
+input[type=submit]:hover, a:hover {
+    color:black;
+    background-color: white;
+}
+
+select {
+    width: 90%;
+    background-color: rgba(128, 118, 118, 0.582); 
+    border-radius: 3px;
+    font-size:16;
+    text-align: center;
+    padding: 2px;
+    text-align-last: center;
+    font-family: Raleway;
+}
+
+#perc {
+    font-weight: 800;
+    font-size: 30;
+    margin: 2px;
+    text-shadow: rgba(160, 154, 154, 0.541) 1px 1px;
+}

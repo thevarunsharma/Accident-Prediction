@@ -11,12 +11,13 @@ Accident prediction using Naive Bayes
 - *templates/* : directory containing Jinja templates to be rendered by flask
 
 ## Requirements
-- following Python-3 libraries have been used: Pandas, pickle, Flask, Jinja
+- Find in `requirements.txt`
 
 ## Usage
+- navigate to the current directory first
 - run on terminal as:
 ```
-$ python3 main.py
+$ gunicorn Accident_Prediction:app
 ```
-- server running at http://localhost:5000 or http://127.0.0.1:5000
+- server running at http://localhost:8000 or http://127.0.0.1:8000
 

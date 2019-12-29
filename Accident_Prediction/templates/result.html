@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Result</title>
+        <link href="https://fonts.googleapis.com/css?family=Alegreya|Raleway&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+        <link rel='icon' href="{{url_for('static', filename='logo.png')}}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <center>
+        <h1>Accident Chance Prediction</h1>
+        <h3><i>Percentage Chance of Accident for following configuration: </i> <span id='perc'>{{perc}}</span></h3>
+        <table>
+            <tr>
+                <td class='field'>State/ UT :</td>
+                <td class='value'>{{data['state'].title()}}</td>
+            </tr>
+            <tr>
+                <td class='field'>Type of Road :</td>
+                <td class='value'>{{data['type_of_road']}}</td>
+            </tr>
+            <tr>
+                <td class='field'>Weather Condition :</td>
+                <td class='value'>{{data['type_of_weather']}}</td>
+            </tr>
+            <tr>
+                <td class='field'>Nature of Location :</td>
+                <td class='value'>{{data['location'].title()}}</td>
+            </tr>
+            <tr>
+                <td class='field'>Status of License :</td>
+                <td class='value'>{{data['license'].title()}}</td>
+            </tr>
+            <tr>
+                <td class='field'>Vehicle Category :</td>
+                <td class='value'>{{data['vehicle'].title()}}</td>
+            </tr>
+            <tr>
+                <td class='field'>Alcohol consumption :</td>
+                <td class='value'>{{data['drunk']}}</td>
+            </tr>
+            <tr>
+                <td class='field'>Type of Junction :</td><br>
+                <td class='value'>{{data['junction'].title()}}</td>
+            </tr>
+        </table>
+        <a href="{{url_for('home')}}">BACK</a>
+        </center>
+    </body>
+</html>

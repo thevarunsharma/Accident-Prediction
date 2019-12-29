@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <link rel='icon' href="{{url_for('static', filename='logo.png')}}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  </head>
+<body>
+  <center>
+  <h1>Accident Chance Prediction</h1>
+  <h3><i>Please provide the following information:</i></h3>
+  <form action="" method="POST">
+  <table>
+    <tr>
+      <td class='field'>State/ UT :</td>
+      <td class='value'>
+        <select name="state" required>
+          <option value="" disabled selected>SELECT STATE</option>
+          <option value="andaman and nicobar islands">Andaman and Nicobar Islands</option>
+          <option value="andhra pradesh">Andhra Pradesh</option>
+          <option value="arunachal pradesh">Arunachal Pradesh</option>
+          <option value="assam">Assam</option>
+          <option value="bihar">Bihar</option>
+          <option value="chandigarh">Chandigarh</option>
+          <option value="chhattisgarh">Chhattisgarh</option>
+          <option value="dadra & nagar haveli">Dadra & Nagar Haveli</option>
+          <option value="daman & diu">Daman & Diu</option>
+          <option value="delhi">Delhi</option>
+          <option value="goa">Goa</option>
+          <option value="gujarat">Gujarat</option>
+          <option value="haryana">Haryana</option>
+          <option value="himachal pradesh">Himachal Pradesh</option>
+          <option value="jammu & kashmir">Jammu & Kashmir</option>
+          <option value="jharkhand">Jharkhand</option>
+          <option value="karnataka">Karnataka</option>
+          <option value="kerala">Kerala</option>
+          <option value="lakshadweep">Lakshadweep</option>
+          <option value="madhya pradesh">Madhya Pradesh</option>
+          <option value="manipur">Manipur</option>
+          <option value="meghalaya">Meghalaya</option>
+          <option value="mizoram">Mizoram</option>
+          <option value="nagaland">Nagaland</option>
+          <option value="orissa">Odisha</option>
+          <option value="puducherry">Puducherry</option>
+          <option value="punjab">Punjab</option>
+          <option value="rajasthan">Rajasthan</option>
+          <option value="sikkim">Sikkim</option>
+          <option value="tamil nadu">Tamil Nadu</option>
+          <option value="telangana">Telangana</option>
+          <option value="tripura">Tripura</option>
+          <option value="uttar pradesh">Uttar Pradesh</option>
+          <option value="uttarakhand">Uttarakhand</option>
+          <option value="west bengal">West Bengal</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class='field'>Type of Road :</td> 
+      <td class='value'>
+        <input type="radio" value="Surfaced" name="type_of_road" checked>Surfaced &nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="radio" value="Unsurfaced" name="type_of_road">Unsurfaced
+      </td>
+    </tr>
+    <tr>
+      <td class='field'>Weather Condition :</td>
+      <td class='value'>
+        <select name="type_of_weather" required>
+          <option value="" disabled selected>SELECT WEATHER</option>
+          <option value="Sunny/Clear">Sunny/Clear</option>
+          <option value="Rainy">Rainy</option>
+          <option value="Foggy/Misty">Foggy/Misty</option>
+          <option value="Hail/Sleet">Hail/Sleet</option>
+          <option value="Other Extraordinary Weather Condition">Other Extraordinary Weather Condition</option>
+        </select>
+     </td>
+   </tr>
+
+   <tr>
+     <td class='field'>Nature of Location :</td>
+      <td class='value'>
+        <select name="location" required>
+          <option value="" disabled selected>SELECT LOCATION</option>
+          <option value="market">Market</option>
+          <option value="school/college">School, College or Educational Institutions</option>
+          <option value="village">Village</option>
+          <option value="industry/factory">Industry or Factory</option>
+          <option value="religious place">Religious Place</option>
+          <option value="recreational place/ cinema">Recreational Place/ Cinema</option>
+          <option value="office">Office</option>
+          <option value="hospital">Hospital</option>
+          <option value="residential area">Residential Area</option>
+          <option value="open area">Open Area</option>
+          <option value="bus-stop">Bus-Stop</option>
+          <option value="petrol pump">Petrol Pump</option>
+          <option value="pedestrian crossing">Pedestrian Crossing</option>
+          <option value="enchroachment">Enchroachment</option>
+          <option value="narrow-bridge & curves">Narrow-Bridge & Curves</option>
+        </select>
+      </td>
+   </tr>
+
+   <tr>
+     <td class='field'>Status of License :</td>
+     <td class='value'>
+      <input type="radio" value="regular" name="license" checked>Regular License&nbsp&nbsp</br>
+      <input type="radio" value="learner" name="license">Learner's License</br>
+      <input type="radio" value="non-licensed" name="license">Non-Licensed&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     </td>
+   </tr>
+
+   <tr>
+     <td class='field'>Vehicle Category :</td>
+     <td class='value'>
+      <select name="vehicle" required>
+        <option value="" disabled selected>SELECT VEHICLE CATEGORY</option>
+        <option value="two-wheelers">Two-Wheelers</option>
+        <option value="auto-rickshaws">Auto-Rickshaws</option>
+        <option value="cars, jeeps, taxis">Cars, Jeeps, Taxis</option>
+        <option value="buses">Buses</option>
+        <option value="trucks, tempos, mavs, tractors">Trucks, Tempos, MAVs, Tractors</option>
+        <option value="other motor vehicles">Other motor vehicles</option>
+        <option value="other vehicles/objects">Other vehicular objects</option>
+      </select>
+     </td>
+   </tr>
+
+   <tr>
+     <td class='field'>Alcohol consumption :</td>
+     <td class='value'>
+      <input type="radio" value="Drunk" name="drunk">Yes &nbsp&nbsp&nbsp&nbsp&nbsp
+      <input type="radio" value="Not Drunk" name="drunk" checked>No
+     </td>
+   </tr>
+
+   <tr>
+     <td class='field'>Type of Junction :</td><br>
+     <td class='value'>
+      <select name="junction" required>
+        <option value="" disabled selected>SELECT JUNCTION</option>
+        <option value="T-Junction">T-Junction</option>
+        <option value="Y-Junction">Y-Junction</option>
+        <option value="Four arm Junction">Four arm Junction</option>
+        <option value="Staggered Junction">Staggered Junction</option>
+        <option value="Round about Junction">Round about Junction</option>
+        <option value="none">No junction</option>
+      </select>
+     </td>
+   </tr>
+  </table>
+  <input type="submit" value="PREDICT">
+  </form>
+  </center>
+</body>
+</html>

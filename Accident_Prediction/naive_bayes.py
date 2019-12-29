@@ -37,6 +37,15 @@ class NaiveBayes:
             return 1
         return Decimal(pxa)/Decimal(px)
 
+    def weather_prob(self, state, type_of_weather):
+        # pxa = __class__.get_state_prob(self.Probs['Type of Weather'].prob_XA,
+        #                     state, self.state_map)[type_of_weather]
+        pxa = self.Probs['Type of Weather'].prob_XA['total'][type_of_weather]
+        px = self.Probs['Type of Weather'].prob_X[type_of_weather]
+        if pxa == 0 or px == 0:
+            return 1
+        return Decimal(pxa)/Decimal(px)
+
     def location_prob(self, state, location):
         pxa = __class__.get_state_prob(self.Probs['Type of Location'].prob_XA,
                              state, self.state_map)[location]
@@ -72,6 +81,8 @@ class NaiveBayes:
         return Decimal(pxa)/Decimal(px)
 
     def junction_prob(self, junction):
+        if junction=='none':
+            return 1
         pxa = self.Probs['Type of Junction'].prob_XA[junction]
         px = self.Probs['Type of Junction'].prob_X[junction]
         if pxa == 0 or px == 0:
@@ -82,14 +93,15 @@ class NaiveBayes:
         return Decimal(__class__.get_state_prob(self.Probs['Priors'].prob_XA,
                                                 state, self.state_map))
 
-    def get_probability(self, state, type_of_road, location,
+    def get_probability(self, state, type_of_road, type_of_weather, location,
                         licence, vehicle, drunk=False, junction=None):
         p_road = self.road_prob(state, type_of_road)
+        p_wea = self.weather_prob(state, type_of_weather)
         p_loc = self.location_prob(state, location)
         p_lic = self.licence_prob(state, licence)
         p_veh = self.vehicle_prob(state, vehicle)
         p_prior = self.prior_prob(state)
-        P = p_road * p_loc * p_lic * p_veh * p_prior
+        P = p_road * p_wea * p_loc * p_lic * p_veh * p_prior
         if drunk:
             P *= self.alcohol_prob(state, 'Drunk')
         if junction is not None:
