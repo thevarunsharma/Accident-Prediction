@@ -1,5 +1,5 @@
 # Accident-Prediction
-Accident prediction using Naive Bayes
+Accident prediction using Naive Bayes (Machine Learning CED17 Course Project)
 
 ## Components of the project
 - *main.py* : main python script to start the flask application (server)
