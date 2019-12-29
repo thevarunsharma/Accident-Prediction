@@ -21,3 +21,5 @@ $ gunicorn Accident_Prediction:app
 ```
 - server running at http://localhost:8000 or http://127.0.0.1:8000
 
+## Deployment
+http://accident-chance.herokuapp.com/
